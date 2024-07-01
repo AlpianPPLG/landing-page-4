@@ -1,4 +1,8 @@
 import { useState } from "react";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
+
+AOS.init(); // Initialize AOS
 
 const FAQSection = () => {
   const faqs = [
@@ -33,7 +37,7 @@ const FAQSection = () => {
   return (
     <section id="faq" className="py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <span className="text-indigo-600 font-bold uppercase">FAQ</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-800 mt-2">
             Frequently Asked Questions
@@ -41,7 +45,12 @@ const FAQSection = () => {
         </div>
         <div className="space-y-6">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-md"
+              data-aos="fade-up"
+              data-aos-delay={`${index * 100}`}
+            >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left focus:outline-none"

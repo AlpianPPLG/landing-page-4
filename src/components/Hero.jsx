@@ -9,7 +9,8 @@ const Hero = () => {
           Fast &amp; SEO friendly
         </p>
         <h1 className="my-3 text-3xl font-bold tracking-tight text-gray-800 md:text-5xl dark:text-gray-900 animate-slide-up">
-          Best Service Offered Here
+          <span className="text-indigo-600 underline">Best</span> Service
+          Offered Here
         </h1>
         <div>
           <p className="max-w-2xl mx-auto my-2 text-base text-gray-500 md:leading-relaxed md:text-xl dark:text-gray-400 animate-fade-in">

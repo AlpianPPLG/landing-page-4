@@ -1,8 +1,13 @@
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
+
+AOS.init(); // Initialize AOS
+
 const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <span className="text-indigo-600 font-bold uppercase">
             Contact Us
           </span>
@@ -13,10 +18,14 @@ const ContactSection = () => {
             Have questions? Feel free to reach out to us. We are here to help!
           </p>
         </div>
-        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl p-8">
+        <div
+          className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl p-8"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {/* Formulir Kontak */}
           <form className="space-y-4">
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300">
               <label
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700"
@@ -31,7 +40,7 @@ const ContactSection = () => {
                 placeholder="Your Name"
               />
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="400">
               <label
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
@@ -46,7 +55,7 @@ const ContactSection = () => {
                 placeholder="Your Email"
               />
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="500">
               <label
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700"
@@ -61,7 +70,11 @@ const ContactSection = () => {
                 placeholder="Your Message"
               ></textarea>
             </div>
-            <div className="text-center">
+            <div
+              className="text-center"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <button
                 type="submit"
                 className="inline-block w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
